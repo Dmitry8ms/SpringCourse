@@ -17,17 +17,17 @@ public class TestSpring {
 //
 //        musicPlayer.playMusic();
 //
-//        Music music2 = context.getBean("classicalMusic", Music.class);
-//
+        Music music1 = context.getBean("classicalMusic", Music.class);
+        Music music2 = context.getBean("classicalMusic", Music.class);
+        System.out.println(music1 == music2);
 //        MusicPlayer classicalMusicPlayer = new MusicPlayer(music2);
 //
 //        classicalMusicPlayer.playMusic();
 
-//        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
-//        musicPlayer.playMusic();
+        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+        System.out.println(musicPlayer.getName());
+        System.out.println(musicPlayer.getVolume());
 
-        Computer computer = context.getBean("computer", Computer.class);
-        System.out.println(computer);
 
         context.close();
     }
